@@ -9,7 +9,6 @@ public class HasQuarterState implements State {
 
     public HasQuarterState(GumballMachine gumballMachine) {
         this.gumballMachine = gumballMachine;
-        randomWinner = (int) (Math.random() * 10 + 1);
     }
 
     public void insertQuarter() {
@@ -22,6 +21,7 @@ public class HasQuarterState implements State {
     }
 
     public void turnCrank() {
+        randomWinner = (int) (Math.random() * 10 + 1);
         System.out.println("You will receive your gumball shortly. Winning number:" + randomWinner);
         if (1 == randomWinner && gumballMachine.getCount() > 1) {
             gumballMachine.setState(gumballMachine.getWinnerState());
