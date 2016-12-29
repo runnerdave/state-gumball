@@ -8,7 +8,7 @@ public class GumballMachine {
 
     @Override
     public String toString() {
-        return "GumballMachine{" +
+        return "\nGumballMachine{" +
                 "state=" + state +
                 ", count=" + count +
                 '}';
