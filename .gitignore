@@ -24,3 +24,6 @@ buildNumber.properties
 .mvn/timing.properties
 .idea/
 state-gumball.iml
+/.classpath
+/.project
+/.settings/
