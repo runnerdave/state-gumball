@@ -154,7 +154,7 @@ dispense: void
       <x>540</x>
       <y>180</y>
       <w>210</w>
-      <h>100</h>
+      <h>110</h>
     </coordinates>
     <panel_attributes>GumballMachine
 --
@@ -162,7 +162,8 @@ dispense: void
 state: State
 --
 +GumballMachine(count: int)
-+refill
++refill: void
++releaseBall: void
 </panel_attributes>
     <additional_attributes/>
   </element>
@@ -209,55 +210,55 @@ m1=1</panel_attributes>
     <id>Relation</id>
     <coordinates>
       <x>630</x>
-      <y>270</y>
+      <y>280</y>
       <w>40</w>
-      <h>120</h>
+      <h>110</h>
     </coordinates>
     <panel_attributes>lt=&lt;-</panel_attributes>
-    <additional_attributes>10.0;10.0;20.0;100.0</additional_attributes>
+    <additional_attributes>10.0;10.0;20.0;90.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
       <x>630</x>
-      <y>270</y>
+      <y>280</y>
       <w>140</w>
-      <h>250</h>
+      <h>240</h>
     </coordinates>
     <panel_attributes>lt=&lt;-</panel_attributes>
-    <additional_attributes>10.0;10.0;120.0;80.0;120.0;230.0;20.0;230.0</additional_attributes>
+    <additional_attributes>10.0;10.0;120.0;70.0;120.0;220.0;20.0;220.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
       <x>640</x>
-      <y>270</y>
+      <y>280</y>
       <w>140</w>
-      <h>270</h>
+      <h>260</h>
     </coordinates>
     <panel_attributes>lt=&lt;-</panel_attributes>
-    <additional_attributes>20.0;10.0;120.0;70.0;120.0;250.0;10.0;250.0</additional_attributes>
+    <additional_attributes>20.0;10.0;120.0;60.0;120.0;240.0;10.0;240.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
       <x>380</x>
-      <y>270</y>
+      <y>280</y>
       <w>410</w>
-      <h>330</h>
+      <h>320</h>
     </coordinates>
     <panel_attributes>lt=&lt;-</panel_attributes>
-    <additional_attributes>320.0;10.0;390.0;30.0;390.0;310.0;10.0;310.0</additional_attributes>
+    <additional_attributes>320.0;10.0;390.0;20.0;390.0;300.0;10.0;300.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
       <x>90</x>
-      <y>270</y>
+      <y>280</y>
       <w>710</w>
-      <h>390</h>
+      <h>380</h>
     </coordinates>
     <panel_attributes>lt=&lt;-</panel_attributes>
-    <additional_attributes>640.0;10.0;690.0;20.0;690.0;370.0;10.0;370.0;10.0;170.0</additional_attributes>
+    <additional_attributes>640.0;10.0;690.0;10.0;690.0;360.0;10.0;360.0;10.0;160.0</additional_attributes>
   </element>
 </diagram>
