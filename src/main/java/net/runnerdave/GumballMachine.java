@@ -1,16 +1,21 @@
 package net.runnerdave;
 
+import java.rmi.RemoteException;
+import java.rmi.server.UnicastRemoteObject;
+
 /**
  * Created by davidajimenez on 6/08/2016.
  */
-public class GumballMachine {
+public class GumballMachine extends UnicastRemoteObject implements GumballMachineRemote {
     private int count = 5;
+    private String location;
 
     @Override
     public String toString() {
         return "\nGumballMachine{" +
                 "state=" + state +
                 ", count=" + count +
+                ", location=" + location +
                 '}';
     }
 
@@ -19,9 +24,9 @@ public class GumballMachine {
     private State hasQuarterState;
     private State soldState;
     private State winnerState;
-    State state;
+    private State state;
 
-    public GumballMachine(int totalGumballs) {
+    public GumballMachine(int totalGumballs, String location) throws RemoteException {
         setSoldOutState(new SoldOutState(this));
         setNoQuarterState(new NoQuarterState(this));
         setHasQuarterState(new HasQuarterState(this));
@@ -29,6 +34,7 @@ public class GumballMachine {
         setWinnerState(new WinnerState(this));
 
         this.count = totalGumballs;
+        this.location = location;
 
         if (totalGumballs > 0) {
             state = noQuarterState;
@@ -113,5 +119,13 @@ public class GumballMachine {
 
     public void setCount(int count) {
         this.count = count;
+    }
+
+    public String getLocation() {
+        return location;
+    }
+
+    public State getState() {
+        return state;
     }
 }

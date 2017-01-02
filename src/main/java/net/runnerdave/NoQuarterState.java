@@ -4,7 +4,7 @@ package net.runnerdave;
  * Created by davidajimenez on 6/08/2016.
  */
 public class NoQuarterState implements State {
-    private GumballMachine gumballMachine;
+    private transient GumballMachine gumballMachine;
 
     public NoQuarterState(GumballMachine gumballMachine) {
         this.gumballMachine = gumballMachine;

@@ -4,7 +4,7 @@ package net.runnerdave;
  * Created by davidajimenez on 6/08/2016.
  */
 public class HasQuarterState implements State {
-    private GumballMachine gumballMachine;
+    private transient GumballMachine gumballMachine;
     private int randomWinner;
 
     public HasQuarterState(GumballMachine gumballMachine) {
